@@ -1,4 +1,4 @@
-.navbar::before {
+/* .navbar::before {
   content: "";
   z-index: -1;
   background-image: url(./assets/home/homebk.jpg);
@@ -7,6 +7,10 @@
   top: 0;
   height: 100vh;
   width: 100%;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.home {
+  background-color: #1b2131;
 }
