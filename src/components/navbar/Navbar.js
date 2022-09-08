@@ -20,7 +20,7 @@ const Navbar = () => {
             <Image
               src={logo}
               alt="Dan Abramov"
-              w={{ xl: 230, lg: 200, md: 180, base: 130 }}
+              w={{ xl: 230, lg: 200, base: 180 }}
             />
           </Box>
         </HStack>

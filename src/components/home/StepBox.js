@@ -1,8 +1,9 @@
 import React from "react";
-import { Box, Heading, Image } from "@chakra-ui/react";
+import { Box, Heading, Image, useMediaQuery } from "@chakra-ui/react";
 
 const StepBox = ({ value }) => {
   const { image, step, title, body } = value;
+  const [mobile] = useMediaQuery("(max-width: 800px)");
 
   return (
     <Box
@@ -10,8 +11,8 @@ const StepBox = ({ value }) => {
       borderRadius="lg"
       py={10}
       color={"brand.light"}
-      maxW={"360px"}
-      m={"10px"}
+      maxW={mobile ? "full" : "360px"}
+      border={0}
     >
       <Box px={10}>
         <Box textAlign={"center"}>

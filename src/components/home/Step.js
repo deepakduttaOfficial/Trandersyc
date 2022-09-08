@@ -21,6 +21,7 @@ import step3 from "../../assets/home/step3.png";
 
 const Step = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const steps = [
     {
       image: step1,
@@ -44,7 +45,6 @@ const Step = () => {
   return (
     <Stack
       spacing={20}
-      mt={5}
       px={{ xl: "100px", lg: "40px", md: "20px", base: "10px" }}
     >
       <Box
@@ -89,7 +89,7 @@ const Step = () => {
         >
           3 Easy Steps To Improve Your Performance
         </Heading>
-        <HStack mt={5} flexWrap={"wrap"} justifyContent={"center"}>
+        <HStack mt={5} flexWrap={"wrap"} justifyContent="center">
           {steps.map((value, index) => (
             <StepBox key={index} value={value} />
           ))}
