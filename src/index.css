@@ -15,10 +15,18 @@
   background-color: #1b2131;
 }
 
-.signup {
-  background-color: #121721;
-}
-
 .css-10pusik {
   margin: 10px !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #383846;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #181d29;
 }

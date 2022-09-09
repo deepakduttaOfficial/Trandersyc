@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Checkbox,
   Container,
   FormControl,
   FormLabel,
@@ -10,26 +9,21 @@ import {
   Input,
   SimpleGrid,
   Text,
-  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import loginlogo from "../../assets/home/login_logo.svg";
 
-const Signup = () => {
-  const colSpan = useBreakpointValue({ base: 2, md: 1 });
+const Signin = () => {
   const [value, setValue] = useState({
-    firstName: "",
-    lastName: "",
     email: "",
-    number: "",
     password: "",
     error: false,
     success: false,
     loading: false,
   });
-  const { firstName, lastName, email, number, password } = value;
+  const { email, password } = value;
 
   const handleChange = (name) => (e) => {
     setValue({
@@ -40,63 +34,32 @@ const Signup = () => {
       loading: false,
     });
   };
+
   const isSubmit = () => {
     console.log(value);
   };
-
   return (
     <Box color={"brand.light"}>
       <style>{"body { background-color: #121721; }"}</style>
       <Container maxW={"xl"}>
         <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
-          <VStack spacing={3} w={"full"} mb={3}>
+          <VStack spacing={3} w={"full"} mb={1}>
             <Image src={loginlogo} />
           </VStack>
+
           <SimpleGrid columns={2} columnGap={3} rowGap={4} w="full">
-            <GridItem colSpan={colSpan}>
-              <FormControl>
-                <FormLabel fontSize={"14px"}>First Name</FormLabel>
-                <Input
-                  placeholder="First Name"
-                  size="lg"
-                  onChange={handleChange("firstName")}
-                  value={firstName}
-                />
-              </FormControl>
-            </GridItem>
-            <GridItem colSpan={colSpan}>
-              <FormControl>
-                <FormLabel fontSize={"14px"}>Last Name</FormLabel>
-                <Input
-                  placeholder="Last Name"
-                  size="lg"
-                  onChange={handleChange("lastName")}
-                  value={lastName}
-                />
-              </FormControl>
-            </GridItem>
             <GridItem colSpan={2}>
               <FormControl>
                 <FormLabel fontSize={"14px"}>Email</FormLabel>
                 <Input
                   placeholder="Enter your email"
                   size="lg"
-                  onChange={handleChange("email")}
                   value={email}
+                  onChange={handleChange("email")}
                 />
               </FormControl>
             </GridItem>
-            <GridItem colSpan={2}>
-              <FormControl>
-                <FormLabel fontSize={"14px"}>Number</FormLabel>
-                <Input
-                  placeholder="Enter your Number"
-                  size="lg"
-                  onChange={handleChange("number")}
-                  value={number}
-                />
-              </FormControl>
-            </GridItem>
+
             <GridItem colSpan={2}>
               <FormControl>
                 <FormLabel fontSize={"14px"}>Password</FormLabel>
@@ -104,19 +67,12 @@ const Signup = () => {
                   placeholder="Password"
                   type={"password"}
                   size="lg"
-                  onChange={handleChange("password")}
                   value={password}
+                  onChange={handleChange("password")}
                 />
               </FormControl>
             </GridItem>
-            <GridItem colSpan={2}>
-              <Checkbox defaultChecked>
-                I have read and agree to the{" "}
-                <Text as={NavLink} to={"/"} color="brand.100">
-                  Terms and Conditions
-                </Text>
-              </Checkbox>
-            </GridItem>
+
             <GridItem colSpan={2}>
               <Button
                 size="md"
@@ -138,21 +94,20 @@ const Signup = () => {
                 Sign Up
               </Button>
             </GridItem>
+
             <GridItem colSpan={2}>
               <VStack w="full">
                 <Box textAlign={"center"}>
                   <Text fontSize={"sm"}>
-                    Already a user?
-                    <Text as={NavLink} to="/signin" color={"brand.100"}>
-                      {" "}
-                      Login
-                    </Text>
+                    Forgot your password?{" "}
+                    <Text as={NavLink} to="/" color={"brand.100"}>
+                      Reset your password
+                    </Text>{" "}
                   </Text>
                   <Text fontSize={"sm"}>
-                    By clicking Sign Up you agree
-                    <Text as={NavLink} to="/" color={"brand.100"}>
-                      {" "}
-                      Terms of Use
+                    Don't have an account?{" "}
+                    <Text as={NavLink} to="/signup" color={"brand.100"}>
+                      Sign up
                     </Text>
                   </Text>
                 </Box>
@@ -165,4 +120,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Signin;

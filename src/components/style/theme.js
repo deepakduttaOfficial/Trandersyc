@@ -24,7 +24,7 @@ const inputSelectStyles = {
   sizes: {
     lg: {
       field: {
-        borderRadius: "md",
+        borderRadius: "sm",
       },
     },
   },

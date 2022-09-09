@@ -66,7 +66,7 @@ const SmNavbar = () => {
                     size="md"
                     w={"full"}
                     as={NavLink}
-                    to={"/signin"}
+                    to={"/signup"}
                     bg={"transparent"}
                     color={"gray.400"}
                     _hover={{ bgColor: "brand.100", color: "#0f1014" }}
@@ -82,7 +82,7 @@ const SmNavbar = () => {
                     size="md"
                     w={"full"}
                     as={NavLink}
-                    to={"/signup"}
+                    to={"/signin"}
                     bg={"transparent"}
                     color={"gray.400"}
                     _hover={{ color: "#fff" }}
