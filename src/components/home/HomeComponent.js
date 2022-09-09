@@ -9,6 +9,7 @@ import Simulate from "./Simulate";
 import SimulateTop from "./SimulateTop";
 import Step from "./Step";
 import Tradingjournal from "./Tradingjournal";
+import Footer from "../footer/Footer";
 
 const HomeComponent = () => {
   return (
@@ -23,6 +24,7 @@ const HomeComponent = () => {
       <MobileTrade />
       <LaptopTrade />
       <Question />
+      <Footer />
     </>
   );
 };

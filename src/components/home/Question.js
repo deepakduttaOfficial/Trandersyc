@@ -23,6 +23,8 @@ const Question = () => {
         as={HStack}
         justifyContent={"space-between"}
         mt={3}
+        cursor={"pointer"}
+        userSelect="none"
       >
         <Heading as={"h1"} fontSize="20px" fontWeight={"semibold"}>
           {question}
@@ -56,7 +58,7 @@ const Question = () => {
         mt={"100px"}
         flexDir={mobile ? "column" : "row"}
         justifyContent="space-between"
-        alignItems={"center"}
+        // alignItems={"center"}
       >
         <VStack w={mobile ? "100%" : "48%"} mt={mobile ? 0 : 2}>
           <Accordion defaultIndex={[0]} allowMultiple w={"full"}>
