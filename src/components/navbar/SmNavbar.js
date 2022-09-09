@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Drawer,
   DrawerBody,
@@ -33,7 +34,7 @@ const SmNavbar = () => {
     );
   };
   return (
-    <div>
+    <Box display={{ base: "flex", lg: "none" }}>
       <IconButton
         variant="outline"
         aria-label="HamburgerIcon"
@@ -98,7 +99,7 @@ const SmNavbar = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </div>
+    </Box>
   );
 };
 

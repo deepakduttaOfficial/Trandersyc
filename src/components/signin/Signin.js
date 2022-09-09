@@ -41,8 +41,14 @@ const Signin = () => {
   return (
     <Box color={"brand.light"}>
       <style>{"body { background-color: #121721; }"}</style>
-      <Container maxW={"xl"}>
-        <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
+      <Container maxW={{ md: "xl", base: "full" }}>
+        <VStack
+          w="full"
+          h="full"
+          px={{ md: "20px", base: "10px" }}
+          spacing={10}
+          alignItems="flex-start"
+        >
           <VStack spacing={3} w={"full"} mb={1}>
             <Image src={loginlogo} />
           </VStack>

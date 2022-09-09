@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const BgNavbar = () => {
   return (
-    <HStack>
+    <HStack display={{ base: "none", lg: "flex" }}>
       <Navitem link={"/"} title={"Home"} active />
       <Navitem link={"/"} title={"Features"} />
       <Navitem link={"/"} title={"Tutorials"} />

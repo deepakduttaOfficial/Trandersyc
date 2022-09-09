@@ -1,12 +1,11 @@
 import React from "react";
 import BgNavbar from "./BgNavbar";
-import { Box, Flex, HStack, Image, useMediaQuery } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image } from "@chakra-ui/react";
 // logo
 import logo from "../../assets/home/logo.png";
 import SmNavbar from "./SmNavbar";
 
 const Navbar = () => {
-  const [mobile] = useMediaQuery("(max-width: 960px)");
   return (
     <Box
       w={"full"}
@@ -24,7 +23,8 @@ const Navbar = () => {
             />
           </Box>
         </HStack>
-        {mobile ? <SmNavbar /> : <BgNavbar />}
+        <BgNavbar />
+        <SmNavbar />
       </Flex>
     </Box>
   );
